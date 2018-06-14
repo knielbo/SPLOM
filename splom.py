@@ -32,7 +32,7 @@ def splom(M,featurenames,classvar=False,order=1,fname="splom.png"):
     fig.subplots_adjust(wspace = .35, hspace = .25)
     if classvar:
         c_set = list(set(classvar))
-        colors = [color for color in list(mcolors.BASE_COLORS.keys()) if color != "w"][:len(c_set)]
+        colors = sorted([color for color in list(mcolors.BASE_COLORS.keys()) if color != "w"][:len(c_set)], reverse = True)
     for i, x in enumerate(M.T):
         for ii, y in enumerate(M.T):
             if i == ii:
