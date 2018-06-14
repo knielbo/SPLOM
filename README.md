@@ -10,6 +10,11 @@ $ python splom.py dat/iris.dat
 or
 ```py
 from splom import splom
-fig = splom(X,feature-names,classvar = C,order = 1,fname="myplot.png")
+
+# with class
+fig = splom(X, X_names, classvar = X_class, order = 1, fname="splom_class.png")
+
+# without class
+fig = splom(X, X_names, order = 1, fname="splom_noclass.png")
 
 ```
